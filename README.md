@@ -26,4 +26,4 @@ I managed the authentication with sessions, but it shoul be managed with httpcon
 Thanks. 
 Adriana. 
 
-PS: I uploaded the code on master branch, this is not the propper flow for quality, but this is just a POC. 
+PS: I uploaded the code on master branch, this is not the propper flow for quality, but this is just a POC. Please don't forget to restore the Nuget Packages before run. :)
