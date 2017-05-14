@@ -25,3 +25,5 @@ Somethings are pending:
 I managed the authentication with sessions, but it shoul be managed with httpcontext id.
 Thanks. 
 Adriana. 
+
+PS: I uploaded the code on master branch, this is not the propper flow for quality, but this is just a POC. 
