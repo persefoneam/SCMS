@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D3773C8-9323-461D-8C6F-1833B9500FFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCMS.DAL</RootNamespace>
+    <AssemblyName>SCMS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ISCMSContext.cs" />
+    <Compile Include="Migrations\201705121845446_InitialCreate.cs" />
+    <Compile Include="Migrations\201705121845446_InitialCreate.Designer.cs">
+      <DependentUpon>201705121845446_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705122006301_FirstOne.cs" />
+    <Compile Include="Migrations\201705122006301_FirstOne.Designer.cs">
+      <DependentUpon>201705122006301_FirstOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705132112062_second.cs" />
+    <Compile Include="Migrations\201705132112062_second.Designer.cs">
+      <DependentUpon>201705132112062_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705132252019_changeincourse.cs" />
+    <Compile Include="Migrations\201705132252019_changeincourse.Designer.cs">
+      <DependentUpon>201705132252019_changeincourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705140105045_filechanges.cs" />
+    <Compile Include="Migrations\201705140105045_filechanges.Designer.cs">
+      <DependentUpon>201705140105045_filechanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705140128440_filechanges2.cs" />
+    <Compile Include="Migrations\201705140128440_filechanges2.Designer.cs">
+      <DependentUpon>201705140128440_filechanges2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705140332279_evaluatedactivity.cs" />
+    <Compile Include="Migrations\201705140332279_evaluatedactivity.Designer.cs">
+      <DependentUpon>201705140332279_evaluatedactivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705141727458_lastchanges.cs" />
+    <Compile Include="Migrations\201705141727458_lastchanges.Designer.cs">
+      <DependentUpon>201705141727458_lastchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705141747021_contextinterface.cs" />
+    <Compile Include="Migrations\201705141747021_contextinterface.Designer.cs">
+      <DependentUpon>201705141747021_contextinterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Courses.cs" />
+    <Compile Include="Models\Directory.cs" />
+    <Compile Include="Models\EvaluatedActivity.cs" />
+    <Compile Include="Models\Files.cs" />
+    <Compile Include="Models\UserEvaluationActivity.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCMSContext.cs" />
+    <Compile Include="SCMSInitializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705121845446_InitialCreate.resx">
+      <DependentUpon>201705121845446_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705122006301_FirstOne.resx">
+      <DependentUpon>201705122006301_FirstOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705132112062_second.resx">
+      <DependentUpon>201705132112062_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705132252019_changeincourse.resx">
+      <DependentUpon>201705132252019_changeincourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705140105045_filechanges.resx">
+      <DependentUpon>201705140105045_filechanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705140128440_filechanges2.resx">
+      <DependentUpon>201705140128440_filechanges2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705140332279_evaluatedactivity.resx">
+      <DependentUpon>201705140332279_evaluatedactivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705141727458_lastchanges.resx">
+      <DependentUpon>201705141727458_lastchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705141747021_contextinterface.resx">
+      <DependentUpon>201705141747021_contextinterface.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

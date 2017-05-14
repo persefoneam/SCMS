@@ -1,0 +1,51 @@
+﻿@model SCMS.DAL.Models.Directory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Directory Details</h2>
+
+<div>
+    <h4>Directory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+    </dl>
+</div>
+
+<div style="background-color:#F2F2F2;">
+    <h2>Files</h2>
+    <div style="margin-top:20px;">
+        @Html.Action("GetDirectoryFiles", "Files", new { dirId = Model.ID })
+    </div>
+
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
